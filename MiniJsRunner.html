@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>JsRunner</title>
+
+</head>
+<body style="background-color:#eee">
+
+    <textarea type="text" id="code" ></textarea>
+    <input type="button" id="btn" onclick="obj(c())" value="run" />
+<div id="output" ></div>
+</body>
+<script>
+var obj = function(func){
+var out=func();
+output.innerHTML=out;
+};
+var c=function(){
+var element=code;
+  
+return function(){
+return eval(element.value);
+
+};
+
+
+};
+</script>
+</html>
